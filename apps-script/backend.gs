@@ -3,7 +3,7 @@
  *     Ajustado EXACTAMENTE a la estructura de tus Google Sheets
  ************************************************************/
 
-const SPREADSHEET_ID = '1HMcMqpW-SkqRmCn-Z6HeLJ0JH2oC8wKYcfz_2yfD3Xw';
+const SPREADSHEET_ID = 'YOUR_SPREADSHEET_ID_HERE';
 
 const SHEET_USERS      = 'users';
 const SHEET_ROOMS      = 'rooms';
