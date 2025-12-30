@@ -1,16 +1,26 @@
-# Script de integración con Moodle
+# Moodle Embed — Jitsi Attendance
 
-Este script está pensado para ser insertado en un recurso *Página* dentro de Moodle.
+Este script se inserta en un **recurso tipo Página** en Moodle.
 
-- Usa placeholders como `{firstname}`, `{username}`, `{email}`
-- Lee `M.cfg` cuando está disponible
-- Construye el identificador de sala (room_name) a partir del título del recurso
-- Envía datos al backend mediante `token`, `heartbeat` y `leave`
+## Qué hace
+- Detecta usuario logueado en Moodle
+- Obtiene nombre del taller
+- Llama al backend (Apps Script)
+- Redirige a la sala Jitsi correspondiente
 
-## Uso básico
+## Uso
+1. Crear recurso **Página** en Moodle
+2. Pegar el script desde `page-script.js`
+3. Ajustar variables:
+   - `WEBAPP_URL`
+   - (opcional) normalización del nombre de sala
 
-1. Crear un recurso *Página* en el curso/taller.
-2. En el contenido HTML, incluir:
-   - El HTML visible (mensaje de bienvenida, por ejemplo).
-   - El `<script>` con el contenido de `page-script.js`.
-3. Reemplazar `WEBAPP_URL` por la URL de la WebApp de Apps Script.
+## Requisitos
+- Moodle con usuarios autenticados
+- Apps Script desplegado como WebApp
+- Google Sheet configurado
+
+## Notas
+- No requiere plugins Moodle
+- No almacena contraseñas
+- Compatible con uso semanal de salas
